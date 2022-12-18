@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'console';
+    src: url('../fonts/jetbrainsnerd.ttf');
+}
+
+@font-face {
+    font-family: 'mukta';
+    src: url("../fonts/Mukta-Regular.ttf");
+}
+
+:global(*) {
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+
+:global(body),
+:global(html) {
+    height: 100%;
+    background: #f6f5d4;
+}
+
+.console {
+    background-color: #000000;
+    font-family: "console";
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    .message {
+        display: none;
+
+        &.info {
+            color: #ffffff;
+        }
+
+        &.ok {
+            color: #00ff00;
+        }
+
+        &.error,
+        .error {
+            color: #ff0000;
+        }
+
+        &.code {}
+    }
+
+    .colors,
+    .presents {
+
+        .color,
+        .present {
+            color: #ffffff;
+        }
+    }
+}
+
+.content {
+    font-family: "mukta";
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+
+    .title {
+        color: #f04fe6;
+        font-size: 50px;
+        margin: 32px 0;
+
+        #titleName {
+            font-weight: bold;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .left,
+        .right {
+            flex: 1 1;
+        }
+
+        .left {
+            min-width: 300px;
+
+            .bigliettino {
+                background: #ede5b9;
+                padding: 20px;
+                border: 2px dashed #f04fe6;
+                font-size: 24px;
+                line-height: 26px;
+                box-shadow: 0 0 20px -10px #3b3b3b;
+            }
+        }
+
+        .right {
+            min-width: 300px;
+
+            .mailContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .mailIcon {
+                    font-family: "console";
+                    font-size: 72px;
+                    position: relative;
+                    user-select: none;
+                    cursor: pointer;
+
+                    .notifications {
+                        border: 2px solid red;
+                        background: white;
+                        border-radius: 50px;
+                        position: absolute;
+                        top: 18px;
+                        right: -13px;
+                        font-size: 16px;
+                        height: 25px;
+                        width: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .mails {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .mail {
+                        display: flex;
+                        background: #ede5b9;
+                        width: 100%;
+                        justify-content: space-between;
+                        padding: 20px 32px;
+                        align-items: center;
+                        margin: 10px 0;
+
+                        .mailTitle {
+                            font-size: 32px;
+                            font-weight: bold;
+                        }
+
+                        .download {
+                            background: #f04fe6;
+                            color: #ffffff;
+                            padding: 10px 32px;
+                            border-radius: 5px;
+                            font-size: 24px;
+                            cursor: pointer;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
