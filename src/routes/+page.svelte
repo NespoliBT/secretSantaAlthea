@@ -50,7 +50,7 @@
             setTimeout(() => {
                 titleName = "Althea";
             }, 2000);
-        }, 0);
+        }, totalDelay);
     });
 </script>
 
