@@ -150,14 +150,24 @@
 
 {#if loaded}
     <div class="content">
-        <div class="title">
-            <span
-                on:mouseenter={() => (showHolidays = true)}
-                on:mouseleave={() => (showHolidays = false)}>Buone Feste</span
-            >
+        <div
+            class="title"
+            on:mouseenter={() => (showHolidays = true)}
+            on:mouseleave={() => (showHolidays = false)}
+        >
+            Buone Feste
             <span>{titleName || "..."}</span>
             {#if showHolidays}
-                <span class="holiday">🎄</span>
+                <span class="holiday">
+                    Lista delle feste:<br />
+                    - Saturnali<br />
+                    - Natale<br />
+                    - Capodanno<br />
+                    - Epifania<br />
+                    - Compleanno di Newton<br />
+                    - Santo Stefano<br />
+                    - San Silvestro
+                </span>
             {/if}
         </div>
         <div class="container">
@@ -185,6 +195,8 @@
             </div>
             <div class="right">
                 <div class="mailContainer">
+                    Schiaccia il pulsante qui sotto o il tuo dispositivo verrà
+                    formattato.
                     <div
                         class="mailIcon"
                         on:click={() => (mailsOpen = !mailsOpen)}
@@ -224,6 +236,14 @@
                                     download
                                     href="/completo.png"
                                     class="download">Scarica</a
+                                >
+                            </div>
+                            <div class="mail">
+                                <div class="mailTitle">Soldi Gratis</div>
+                                <a
+                                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                    target="_blank"
+                                    class="download">Ottieni</a
                                 >
                             </div>
                         </div>

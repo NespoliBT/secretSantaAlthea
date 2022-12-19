@@ -71,9 +71,27 @@
         color: #f04fe6;
         font-size: 50px;
         margin: 32px 0;
+        position: relative;
+        text-decoration: underline;
+        width: fit-content;
 
         #titleName {
             font-weight: bold;
+        }
+
+        .holiday {
+            font-size: 24px;
+            font-weight: normal;
+            position: absolute;
+            background: #fcfae0;
+            padding: 10px 20px;
+            border: 2px solid #f04fe6;
+            border-radius: 8px;
+            transform: translateX(20px);
+            z-index: 123;
+            width: 100%;
+            right: 0;
+            top: 90px;
         }
     }
 
